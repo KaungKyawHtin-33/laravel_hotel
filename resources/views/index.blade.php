@@ -445,7 +445,15 @@
       })
     </script> --}}
    
-    <script>
+    <script>z
       const app = angular.module('myApp', []);
+      
+      app.controller('myCtrl', function($scope, $http) {
+        $http({
+          method : "POST",
+          url    : "/api/rooms",
+          data   : {}
+        }).then(function mySuccess(response))
+      })
     </script>
 @endsection
